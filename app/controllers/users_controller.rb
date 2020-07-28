@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     erb :'users/show'
   end
 
-#locals = flash message
+#locals = key value pair, key = message value ="Please..."
   get '/signup' do
     if !logged_in?
       erb :'users/create_user', locals: {message: "Please sign up before you sign in"}
