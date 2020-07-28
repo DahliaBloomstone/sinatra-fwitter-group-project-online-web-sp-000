@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     erb :'users/show'
   end
 
+#locals = flash message
   get '/signup' do
     if !logged_in?
       erb :'users/create_user', locals: {message: "Please sign up before you sign in"}
