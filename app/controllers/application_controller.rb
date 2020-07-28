@@ -10,13 +10,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-   #  binding.pry
-     if logged_in?
-       redirect "/users/#{current_user.id}"
-     else
-     erb :index
-   end
+   erb :index
  end
+
 
   helpers do
 
