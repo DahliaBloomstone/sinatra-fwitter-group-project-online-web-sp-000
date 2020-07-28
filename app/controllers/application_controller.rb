@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "password_security"
   end
 
-  get "/" do
+  get '/' do
    #  binding.pry
      if logged_in?
        redirect "/users/#{current_user.id}"
