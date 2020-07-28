@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
   get '/' do
      erb :index
    end
+#same method in my sinatra project
 
    helpers do
      def logged_in?
