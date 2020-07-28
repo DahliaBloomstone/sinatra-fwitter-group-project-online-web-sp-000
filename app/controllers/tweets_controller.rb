@@ -19,14 +19,12 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    @user = current_user
-    @tweet = Tweet.create(content: params[:content], user: @user)
-    if @tweet.save
-      redirect to "/users/#{@user.slug}"
-    else
-      redirect to '/tweets/new'
-    end
-  end
+     if logged_in?
+       if params[:content] != ""
+         
+
+
+
 
   get '/tweets/:id' do
     if logged_in?
