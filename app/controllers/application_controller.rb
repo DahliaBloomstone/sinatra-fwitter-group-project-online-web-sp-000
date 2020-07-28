@@ -12,8 +12,8 @@ class ApplicationController < Sinatra::Base
   get '/' do
      erb :index
    end
-#same method in my sinatra project
 
+#same helper methods in my sinatra project
    helpers do
      def logged_in?
        !!current_user
